@@ -56,7 +56,7 @@ pipeline{
 			stage("Prod Env") {
 				steps {
 					sshagent(['ubuntu']) {
-			    	 	sh "ssh -o StrictHostKeyChecking=no ubuntu@13.233.83.242 sudo docker run  -d  -p  49153:8080  gouravaas/javatest-app:$BUILD_TAG"
+			    	 	sh "ssh -o StrictHostKeyChecking=no ubuntu@13.233.83.242 sudo docker run  -d  -p  49153:8080  gouravaas/java-app:$BUILD_TAG"
 				}
 			}
 		}
