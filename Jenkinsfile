@@ -4,7 +4,7 @@ pipeline{
 		label "ubuntu-slave1"
 		}
 		stages{
-			stage ("Pull the code from SCM"){
+			stage ("Pull the code latest from SCM"){
 				steps {
 					git branch: 'main', url: 'https://github.com/gouravaas/new_java_docker_app.git'
 					}
